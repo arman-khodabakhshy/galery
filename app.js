@@ -15,3 +15,11 @@ modal.addEventListener('dblclick',function (e) {
     }
 
 })
+modal.addEventListener('mousemove' , function (e){
+if (e.target.tagName=='IMG') {
+    let xdeg = (e.offsetX - 300) / 5;
+    let ydeg = -(e.offsetY - 200) / 5;
+ 
+    e.target.style.transform=`rotateX(${ydeg}deg ) rotateY(${xdeg}deg)`
+}
+} );
